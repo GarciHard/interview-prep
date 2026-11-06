@@ -28,4 +28,27 @@ public class MajorityElement {
 
         return max;
     }
+// 2 2 1 1 1 2 2
+    public static int majorElement(int [] person) {
+
+        int candidate = -1;
+        int counter = 0;
+
+        for ( int x : person ) {
+            if ( candidate == -1 ) {
+                candidate = x;
+                counter++;
+            } else if ( x != candidate ) {
+                counter--;
+                if ( counter <= 0 ) {
+                    candidate = x;
+                    counter++;
+                }
+            } else {
+                counter++;
+            }
+        }
+
+        return candidate;
+    }
 }

@@ -16,5 +16,8 @@ public class MajorityElementTest {
 
         assertEquals(target1, MajorityElement.majorityElement(arr1));
         assertEquals(target2, MajorityElement.majorityElement(arr2));
+
+        assertEquals(target1, MajorityElement.majorElement(arr1));
+        assertEquals(target2, MajorityElement.majorElement(arr2));
     }
 }
